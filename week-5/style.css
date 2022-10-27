@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+body{
+    background-color: hsl(0, 0%, 95%); 
+}
+
+@media screen and (max-width : 1440px){
+    .card-column{
+        position: relative;
+    }
+    .card-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+    }
+    .cards {
+        display: flex;
+    }
+    .card{
+        width: 300px ;
+        padding: 2rem;
+        margin: auto;
+    }
+    .col1{
+        background-color: hsl(31, 77%, 52%);
+    }
+    .col2{
+        background-color: hsl(184, 100%, 22%);
+    }
+    .col3{
+        background-color: hsl(179, 100%, 13%);
+    }
+    .card-img{
+        margin: 20px 0;
+    }
+    .card-title{
+        font-size: 20px;
+        color: hsl(0, 0%, 95%);
+        margin-bottom: 15px;
+        font-family: 'Big Shoulders Display', cursive;
+    }
+    .card-body{
+        font-family: 'Lexend Deca', sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.5rem;
+        color: hsla(0, 0%, 100%, 0.75);
+        max-width: 250px;
+        /* margin: auto; */
+    }
+    .card-btn{
+        display: block;
+        margin: 40px 0 10px;
+        border: none;
+        border-radius: 20px;
+        background-color: hsl(0, 0%, 95%);
+        border: 1px solid hsl(0, 0%, 95%);
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: all 400ms ease-in-out;
+        font-family: 'Lexend Deca', sans-serif;
+    }
+    .card-btn:hover {
+        background-color: transparent;
+    }
+    .col1 .card-btn{
+        color: hsl(31, 77%, 52%);
+    }
+    .col2 .card-btn{
+        color: hsl(184, 100%, 22%);
+    }
+    .col3 .card-btn{
+        color: hsl(179, 100%, 13%);
+    }
+    .col1 .card-btn:hover,.col2 .card-btn:hover, .col3 .card-btn:hover {
+        color: hsl(0, 0%, 95%);
+    }
+    .grid-link {
+        display: block;
+        text-decoration: none;
+        background-color: hsl(31, 77%, 52%);
+        color: hsl(0, 0%, 95%);
+        padding: 10px 20px;
+        border-radius: 20px;
+        border: 1px solid hsl(31, 77%, 52%);
+        transition: all 400ms ease-in-out;
+        width: fit-content;
+        margin: 3rem auto 1rem;
+    }
+    .grid-link:hover {
+        background-color: transparent;
+        color: hsl(31, 77%, 52%);
+    }
+    
+    
+}
+
+@media screen and (max-width: 375px){
+    .card-container{
+        top: 100%;
+    }
+    .cards{
+        flex-direction: column;
+    }
+    .card{
+        width: 250px;
+        padding: 1rem;
+        margin: auto;
+    }
+}
