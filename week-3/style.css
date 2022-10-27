@@ -1,0 +1,585 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+/* ---------------------------------------GENERAL STYLES---------------------------------- */
+body{
+    scroll-behavior: smooth;
+}
+section {
+    padding: 4rem;
+}
+.section-title h5{
+    color: rgb(176, 180, 145);
+    margin-bottom: 0.3rem !important;
+    font-size: 1rem;
+    text-align: center;
+}
+.section-title h1{
+    width: fit-content;
+    font-size: 2.5rem;
+    position: relative;
+    margin: 0.5rem auto 1rem;
+    overflow-x: visible;
+}
+.section-title h1::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1rem;
+    height: 0.5rem;
+    background-color: rgb(148, 151, 122);
+    top: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.section-title h1::after{
+    content: "";
+    display: block;
+    width: 60%;
+    position: absolute;
+    height: 0.2rem;
+    background-color: rgb(148, 151, 122);
+    top: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/*--------------------------------------------------------------------------HEADER----------------------- */
+
+header{
+    background-color: rgb(227, 228, 232);
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    position: fixed;
+    position: -webkit-sticky;
+    width: 100%;
+    z-index: 1000;
+    padding: 1rem 4rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.navlinks {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+}
+.navlinks li a{
+    cursor: pointer;
+    transition: all 500ms ease-in-out;
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    height: 100%;
+}
+.navlinks li a:hover{
+    color: rgb(176, 180, 145);
+}
+.navlinks li a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0.2rem;
+    background-color: rgb(176, 180, 145);
+    margin: auto;
+    transition: all 500ms ease-in-out;
+    
+}
+.navlinks li a:hover::after{
+    width: 100%;
+}
+.navlinks li a.active{
+    color: rgb(176, 180, 145);
+}
+.navlinks li a.active::after{
+    width: 100%;
+}
+.contact-link {
+    background-color: rgb(176, 180, 145);
+    padding: 0.3rem 1rem;
+    display: block;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white ;
+    border: 1px solid rgb(176, 180, 145);
+    border-radius: 0.5rem;
+}
+.contact-link:hover{
+    background-color: white;
+}
+.contact-link:hover::after{
+    width: 0px !important;
+}
+
+.hero-section {
+    padding: 2rem 4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+.hero-contents{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.hello{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgb(176, 180, 145);
+}
+.hello-line{
+    content: "";
+    display: block;
+    width: 25rem;
+    height: 0.1rem;
+    background-color: black;
+}
+
+.hero-img {
+    width: 500px;
+    transform: translateY(100px);
+}
+.hero-img img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    
+}
+.hero-btns{
+    margin: 1rem 0;
+    display: flex;
+    gap: 1rem;
+}
+.btn1, .btn2 {
+   padding: 0.5rem 1rem; 
+   border: 1px solid rgb(176, 180, 145);
+   font-weight: bold;
+   border-radius: 0.4rem;
+   display: block;
+   text-decoration: none;
+}
+.btn1{
+    background-color: rgb(148, 151, 122);
+    color: white;
+    transition: all 400ms ease-in-out;
+}
+.btn1:hover{
+    background-color: white ;
+    color: rgb(148, 151, 122);
+}
+.btn2{
+    background-color: white ;
+    color: rgb(148, 151, 122);
+    transition: all 400ms ease-in-out;
+}
+.btn2:hover{
+    background-color: rgb(148, 151, 122);
+    color: white;
+}
+.hero-section h3 {
+    color: rgb(176, 180, 145);
+}
+
+/* ---------------------------------------MAIN PART--------------------------------------- */
+
+/* -------------------------------------ABOUT ME SECTION-------------------------------------- */
+#about-me-section{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 0.5rem;
+    padding: 6rem 4rem;
+}
+.about-me-img{
+    background-color: white;
+    margin-left: 4rem;
+    width: 350px;
+    padding: 0 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.about-me-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.about-me-title{
+    width: fit-content;
+}
+.about-me-title h5{
+    width: fit-content;
+    text-align: center;
+    margin: auto;
+}
+.about-me-text{
+    margin: 1rem 0 0.2;
+    color: rgb(148, 151, 122);
+    line-height: 1.3rem;
+    letter-spacing: 0.09rem;
+}
+.identity {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.property p, .values p{
+    margin: 1rem 0;
+}
+.values {
+    color: rgb(148, 151, 122);
+}
+/* ---------------------------------------SERVICES-SECTION--------------------------- */
+#services-section{
+    background-color: rgb(248, 249, 250);
+}
+.services{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: center;
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+}
+.service{
+    background-color: white;
+    padding: 3rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 400px;
+    margin: auto;
+    border-radius: 0.5rem;
+    transition: all 400ms ease-in-out;
+    text-align: center;
+    color: rgb(84, 85, 73);
+    overflow: visible;
+    position: relative;
+    
+}
+.service:hover{
+    background-color: rgb(148, 151, 122);
+    color: white;
+    
+}
+.service-icon{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(84, 85, 73);
+    padding: 0.4rem;
+    border-radius: 50%;
+    transition: all 400ms ease-in-out;
+}
+.service:hover > .service-icon {
+    background-color: white;
+}
+.service-icon img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+.service .title{
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+}
+.service .title::after{
+    content: "";
+    display: block;
+    width: 2.5rem;
+    height: 0.1rem;
+    background-color: rgb(113, 113, 114);
+    margin: 1rem auto 0;
+    transition: all 400ms ease-in-out;
+}
+.service:hover > .title::after{
+    background-color: black;
+}
+
+/* -----------------------------------------------SKILL SECTION--------------------------------- */
+.skills-section {
+    margin-top: 3rem;
+}
+.skills {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+.skill1, .skill2, .skill3, .skill4 {
+    position: relative;
+    height: 4rem;
+}
+.skill-head{
+    display: flex;
+    /* background-color: orange; */
+}
+.bar1, .bar2{
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    height: 1.2rem;
+    width: 100%;
+    display: block;
+    background-color:  rgb(217, 217, 219);
+    border-radius: 0.2rem;
+}
+.skill1 .bar2 {
+    background-color: rgb(84, 85, 73);
+    width: 90%;
+}
+.skill1 .skill-name {
+    width: 88%;
+}
+.skill2 .skill-name {
+    width: 68%;
+}
+.skill2 .bar2{
+    background-color: rgb(84, 85, 73);
+    width: 70%
+}
+.skill3 .skill-name {
+    width: 58%;
+}
+.skill3 .bar2{
+    background-color: rgb(84, 85, 73);
+    width: 60%
+}
+.skill4 .skill-name {
+    width: 48%;
+}
+.skill4 .bar2{
+    background-color: rgb(84, 85, 73);
+    width: 50%
+}
+/* --------------------------------------------------------PROJECTS SECTION------------------------------ */
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1.5rem;
+    row-gap : 3rem;
+    margin-top: 2rem;
+    padding: 1rem;
+}
+.project {
+    padding: 0.8rem;
+    background-color: rgb(146, 148, 128);
+    /* text-align: center; */
+    border-radius: 1rem;
+    width: fit-content;
+    margin: auto;
+    transition: all 400ms ease-in-out;
+    /* height: 250px; */
+}
+.project:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.project-img{
+    width: 300px;
+    height: 250px;
+    margin: auto;
+    border-radius: 1rem;
+}
+.project-img img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+.project-title{
+    margin: 1rem 0;
+}
+.project-contents button{
+    display: block;
+    margin: 1rem 0;
+    padding: 0.5rem 1rem; 
+    border: 1px solid rgb(176, 180, 145);
+    font-weight: bold;
+    border-radius: 0.4rem;
+    background-color: white ;
+    color: rgb(148, 151, 122);
+    transition: all 400ms ease-in-out;
+}
+
+.project-contents button:hover{
+    background-color:  rgb(148, 151, 122) ;
+    color: white;
+    
+}
+
+/* ----------------------------------------------FOOTER-SECTION-------------------------------------- */
+#footer-section{
+    background-color: rgb(34, 41, 49);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    /* align-items: flex-start; */
+}
+.footer-about, .footer-link, .footer-newsletter{
+    margin: 0 auto;
+}
+.footer-title{
+    margin-bottom: 1.5rem;
+    color: rgb(248, 249, 250);
+    font-size: 1.3rem;
+}
+.footer-about-body{
+    color: rgb(217, 217, 219);
+    line-height: 1.4rem;
+    letter-spacing: 0.06rem;
+}
+.footer-social-title {
+    margin: 2rem 0 1rem;
+    color: rgb(217, 217, 219);
+}
+.footer-socials{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.footer-social-img{
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background-color: rgb(148, 151, 122);
+}
+.footer-links{
+    /* background-color: green; */
+    margin: auto;
+    width: fit-content;
+}
+.footer-links li{
+    margin-bottom: 1rem;
+    color: rgb(217, 217, 219);
+    font-size: 1.1rem;
+}
+.footer-newsletter-body{
+    color: rgb(217, 217, 219);
+    line-height: 1.2rem;
+    letter-spacing: 0.06rem;
+    margin-bottom: 1rem;
+}
+.newsletter-form input, .newsletter-form button{
+    display: block;
+    width: 100%;
+    margin: 0.5rem auto;
+    padding: 0.5rem 1rem;
+    border: 1px solid rgb(148, 151, 122);
+    outline: none;
+}
+.newsletter-form button{
+    background-color: rgb(148, 151, 122);
+}
+
+
+
+.footer-social-img img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* ---------------------------------------------CONTACT PAGE------------------------------------------ */
+#contact-section{
+    min-height: 100vh;
+    background-color: rgb(248, 249, 250);
+}
+.contact-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin-top: 2rem;
+    
+    /* align-items: center; */
+    /* background-color: green; */
+}
+.contact-form{
+    /* background-color: orange; */
+    padding: 0 1rem;
+    width: 120%;
+
+}
+.contact-form input{
+    display: block;
+    border: 2px solid rgb(146, 148, 128);
+    padding: 0.6rem 1.2rem;
+    margin-bottom: 1.5rem;
+    outline: none;
+}
+#subject {
+    width: 100%;
+}
+.contact-identity{
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    /* background-color: blue; */
+}
+.contact-identity input{
+    width: 100%;
+}
+.contact-form textarea {
+    display: block;
+    padding: 0.6rem 1.2rem;
+    resize: none;
+    border: 2px solid rgb(146, 148, 128);
+    width: 100%;
+    margin-bottom: 1.5rem;
+    outline: none
+}
+.contact-btn{
+    display: block;
+    margin: 1rem 0;
+    padding: 0.8rem 1.5rem; 
+    border: 1px solid rgb(176, 180, 145);
+    font-weight: bold;
+    border-radius: 0.4rem;
+    background-color: rgb(148, 151, 122)  ;
+    color: white;
+    transition: all 400ms ease-in-out;
+}
+.contact-btn:hover{
+    background-color: white;
+    color: rgb(148, 151, 122);
+}
+.socials{
+    /* background-color: saddlebrown; */
+    margin-left: 5rem;
+    width: 80%;
+}
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+.social-img {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    padding: 0.5rem;
+    background-color: rgb(148, 151, 122);
+    /* margin: auto; */
+}
+.social-img img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
