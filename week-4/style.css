@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+/* ----------------------REGISTER AND LOGIN PAGE----------------------- */
+.register, .login{
+    min-height: 100vh;
+    background-color: rgb(248, 250, 251);
+    padding: 4rem;
+}
+.register-container, .login-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1rem;
+}
+.register-img, .login-img{
+    height: 100%;
+    width: 500px;
+}
+.register-img img, .login-img img{
+    width: 100%;
+    height: 100%;
+}
+.register-form, .login-form{
+    padding: 0 2rem;
+}
+
+.input-field{
+    padding: 1rem 0 0;
+    margin: 1rem 0;
+    position: relative;
+}
+
+.input-field input, .input-field select{
+    display: block;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    border-bottom: 1px solid rgb(184, 184, 184);
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    width: 90%;
+    z-index: 10;
+}
+.input-field input[type=color]{
+    width: 80%;
+    height: 3rem;
+}
+
+.input-field input:not(:placeholder-shown) + label, select:valid + label{
+    position: absolute;
+    top: 0;
+    left: 0.5rem;
+    display: block;
+    color: rgb(165, 164, 164);
+    transition: all 400ms ease-in-out;
+    font-size: 0.9rem;
+    display: block;
+
+}
+.input-field input:not(:placeholder-shown) {
+    font-size: 1.1rem;
+}
+.input-field input:placeholder-shown + label, select:invalid + label{
+    position: absolute;
+    top: 1.6rem;
+    left: 0.5rem;
+    display: block;
+    color: rgb(165, 164, 164);
+    transition: all 400ms ease-in-out;
+    font-size: 0.9rem;
+    cursor:text;
+    z-index: 1;
+}
+select option{
+    background-color: rgb(184, 184, 184);
+}
+.input-numbers{
+    display: flex;
+    align-items: center;
+}
+.input-numbers .input-field, .input-identity .input-field {
+    margin-top: 0;
+    
+}
+.input-numbers input{
+    width: 80%;
+}
+.input-identity{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+ .input-identity select,.input-identity input{
+    width: 80%;
+}
+form button{
+    margin-top: 2rem;
+    padding: 0.8rem 3rem;
+    display: block;
+    background-color: rgb(64, 123, 255);
+    border: none;
+    outline: none;
+    font-weight: bold;
+    color: white;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+.form-question{
+    font-size: 0.8rem;
+    margin-top: 0.4rem;
+}
+.login-link, .register-link{
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: rgb(64, 123, 255);
+}
+/* ---------------------------------------SUCCESS PAGE------------------------- */
+.success-section{
+    background: linear-gradient(rgba(0,0,0, 0.2), rgba(0,0,0,0.5)), rgb(187, 186, 186) ;
+    min-height: 100vh;
+    position: relative;
+}
+.success-card{
+    background-color: white ;
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.upper-part{
+    background-color: rgb(64, 123, 255);
+    padding: 1.5rem;
+    height: 150px;
+}
+.success-img{
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    padding: 20px;
+    border: 3px solid black;
+    border-radius: 50%;
+}
+.success-img img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.lower-part {
+    text-align: center;
+    padding: 1rem;
+}
+.lower-part h1{
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
